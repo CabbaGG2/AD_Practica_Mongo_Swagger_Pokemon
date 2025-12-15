@@ -1,5 +1,7 @@
 package org.example.controller;
 
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.json.JsonReadFeature;
 import org.example.model.Entrenador;
 import org.example.repository.EntrenadorRepository;
 import org.example.service.EntrenadorService;
@@ -8,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.List;
 
@@ -43,4 +46,12 @@ public class RestEntrenador {
         entrenadorService.actualizarEntrenador(entrenador);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PostMapping("/Serializar/{id}")
+    public ResponseEntity<Entrenador> serializar(@PathVariable String id) throws IOException {
+
+        Entrenador entrenador = entrenadorService.buscarEntrenador(id);
+        return ResponseEntity.ok(entrenador);
+    }
+
 }

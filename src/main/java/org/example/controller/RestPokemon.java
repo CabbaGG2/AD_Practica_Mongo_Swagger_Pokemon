@@ -41,5 +41,11 @@ public class RestPokemon {
         return ResponseEntity.ok(e);
     }
 
+    @DeleteMapping("/eliminar/{id}")
+    public ResponseEntity<Pokemon> eliminar(@PathVariable String id) {
+        pokemonService.eliminarPokemon(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
 }

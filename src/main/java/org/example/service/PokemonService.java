@@ -46,13 +46,13 @@ public class PokemonService {
         pokemonRepo.deleteById(id);
     }
 
-    public void añadirEntrenadorAPokemon(String idPokemon, String nombreEntrenador) {
+    /*public void añadirEntrenadorAPokemon(String idPokemon, String nombreEntrenador) {
         Pokemon pokemon = buscarPokemon(idPokemon);
         List<Entrenador> entrenador = entrenadorRepo.findByName(nombreEntrenador);
         if (pokemon != null && entrenador != null) {
-            pokemon.setEntrenadorId(idEntrenador);
+            pokemon.setEntrenadorId(entrenador.toString());
             pokemonRepo.save(pokemon);
         }
-    }
+    }*/
 
 }

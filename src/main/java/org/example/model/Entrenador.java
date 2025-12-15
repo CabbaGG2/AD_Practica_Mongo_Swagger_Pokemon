@@ -1,11 +1,15 @@
 package org.example.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "entrenadores")
 public class Entrenador {
+
+    public Entrenador() {
+    }
 
     @Id
     private String id;
@@ -14,7 +18,6 @@ public class Entrenador {
     private String ciudad;
 
     // ---- GETTERS & SETTERS ----
-
 
     public String getId() {
         return id;
