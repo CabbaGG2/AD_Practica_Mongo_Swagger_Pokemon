@@ -1,16 +1,4 @@
-¡Perfecto! Ya tengo todos los ingredientes necesarios:
 
-1. **La estructura de archivos** (Imagen).
-2. **El código fuente real** (Controladores, Modelos, Configuración).
-3. **La plantilla base del README** (Estilo y secciones).
-
-He adaptado tu plantilla para que refleje la **realidad de tu código**, ya que había diferencias importantes con tu plantilla original (por ejemplo: tu código usa dos colecciones separadas referenciadas por ID, no documentos embebidos; las IPs y rutas eran distintas, y tienes funcionalidad de serialización manual).
-
-Aquí tienes el **README.md** listo para copiar y pegar en tu proyecto:
-
----
-
-```markdown
 # 🐉 Microservicio de Gestión de Entrenadores y Pokémon (MongoDB)
 
 Este microservicio proporciona una API RESTful para gestionar **Entrenadores** y **Pokémon**, utilizando una base de datos **MongoDB**. 
@@ -201,7 +189,5 @@ http://localhost:8080
 
 ```dotenv
 http://localhost:8080/swagger-ui/swagger-ui/index.html#/
-
-```
 
 ```
