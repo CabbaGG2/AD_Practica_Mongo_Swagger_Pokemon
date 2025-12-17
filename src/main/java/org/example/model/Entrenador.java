@@ -14,6 +14,7 @@ public class Entrenador {
     @Id
     private String id;
 
+    @JsonProperty("nombre_completo")
     private String nombre;
     private String ciudad;
 

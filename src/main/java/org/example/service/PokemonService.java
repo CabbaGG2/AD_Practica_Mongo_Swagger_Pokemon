@@ -42,6 +42,11 @@ public class PokemonService {
         return entrenador;
     }
 
+    //Actualizar pokemon
+    public void actualizarPokemon(Pokemon p){
+        pokemonRepo.save(p);
+    }
+
     public void eliminarPokemon(String id){
         pokemonRepo.deleteById(id);
     }
